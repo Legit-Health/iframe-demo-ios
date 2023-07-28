@@ -62,7 +62,7 @@ struct WebView: UIViewRepresentable {
     
     func updateUIView(_ webView: WKWebView, context: Context) {
         let companyIdentifier = AppConfig.companyIdentifier
-        let request = URLRequest(url: URL(string: "https://iframe.legit.health/?company=&extraData=djdf848rjfdjdfud8f8fd8fd&primary=00c&isResultEnabled=0")!)
+        let request = URLRequest(url: URL(string: "https://iframe.legit.health/?company=" + companyIdentifier + "&extraData=djdf848rjfdjdfud8f8fd8fd&primary=00c&isResultEnabled=0")!)
 
         webView.load(request)
         
